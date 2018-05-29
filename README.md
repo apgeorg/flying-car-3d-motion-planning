@@ -18,7 +18,7 @@ self.set_home_position(lon0, lat0, 0)
 
 Below the definition of the read_home function:
 
-```  
+```python
 def read_home(file):
     """
     Reads home (lat, lon) from the first line of the `file`.
@@ -26,8 +26,8 @@ def read_home(file):
     with open(file) as f:
         lat, lon = f.readline().split(',')
         lat, lon = float(lat.split(' ')[-1]), float(lon.split(' ')[-1])
-    return lat, lonturn lon, lat
-```        
+    return lat, lon
+```  
 
 And here is a lovely picture of our downtown San Francisco environment from above!
 ![Map of SF](./misc/map.png)
