@@ -6,7 +6,28 @@
 ### Path Planning Algorithm
 
 #### 1. Set your global home position
-Here students should read the first line of the csv file, extract lat0 and lon0 as floating point values and use the self.set_home_position() method to set global home. Explain briefly how you accomplished this in your code.
+
+The code snipped below reads the first line of the colliders.csv, extracts lat0 and lon0 and use them to set the global home position.
+
+```python
+# Read lat0, lon0 from colliders into floating point values
+lat0, lon0 = read_home('colliders.csv')
+# Set home position to (lon0, lat0, 0)
+self.set_home_position(lon0, lat0, 0)    
+```   
+
+Below the definition of the read_home function:
+
+```  
+def read_home(file):
+    """
+    Reads home (lat, lon) from the first line of the `file`.
+    """
+    with open(file) as f:
+        lat, lon = f.readline().split(',')
+        lat, lon = float(lat.split(' ')[-1]), float(lon.split(' ')[-1])
+    return lat, lonturn lon, lat
+```        
 
 And here is a lovely picture of our downtown San Francisco environment from above!
 ![Map of SF](./misc/map.png)
