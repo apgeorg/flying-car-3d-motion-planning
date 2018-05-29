@@ -33,7 +33,12 @@ And here is a lovely picture of our downtown San Francisco environment from abov
 ![Map of SF](./misc/map.png)
 
 #### 2. Set your current local position
-Here as long as you successfully determine your local position relative to global home you'll be all set. Explain briefly how you accomplished this in your code.
+
+The code snipped below retrieve the current global position and convert it to local position.
+
+```python
+local_north, local_east, local_down = global_to_local(self.global_position, self.global_home)
+```
 
 #### 3. Set grid start position from local position
 This is another step in adding flexibility to the start location. As long as it works you're good to go!
