@@ -71,14 +71,14 @@ NORTH_EAST =(1, 1, np.sqrt(2))
 Check if actions are valid:
 
 ```python
-    if y - 1 < 0 or x - 1 < 0 or grid[x - 1, y - 1] == 1:
-        valid_actions.remove(Action.SOUTH_WEST)
-    if y - 1 < 0 or x + 1 > n or grid[x + 1, y - 1] == 1:
-        valid_actions.remove(Action.NORTH_WEST)
-    if y + 1 > m or x + 1 > n or grid[x + 1, y + 1] == 1:
-        valid_actions.remove(Action.NORTH_EAST)
-    if y + 1 > m or x - 1 < 0 or grid[x - 1, y + 1] == 1:
-        valid_actions.remove(Action.SOUTH_EAST)
+if y - 1 < 0 or x - 1 < 0 or grid[x - 1, y - 1] == 1:
+    valid_actions.remove(Action.SOUTH_WEST)
+if y - 1 < 0 or x + 1 > n or grid[x + 1, y - 1] == 1:
+    valid_actions.remove(Action.NORTH_WEST)
+if y + 1 > m or x + 1 > n or grid[x + 1, y + 1] == 1:
+    valid_actions.remove(Action.NORTH_EAST)
+if y + 1 > m or x - 1 < 0 or grid[x - 1, y + 1] == 1:
+    valid_actions.remove(Action.SOUTH_EAST)
 ```
 Run the A* Algorithms to find a path from start to goal:
 
@@ -96,6 +96,6 @@ pruned_path = prune_path(path)
 ```
 
 ### Execute the flight
-#### 1. Does it work?
-It works!
 
+#### Run
+python motion_planning.py --target_lat=37.792572 --target_lon=-122.397336 --target_alt=0.
