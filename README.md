@@ -98,7 +98,7 @@ pruned_path = prune_path(path)
 ### Execute the flight
 
 #### Run
-```python
+```bash
 python motion_planning.py --target_lat=37.792572 --target_lon=-122.397336 --target_alt=0.
 ```
 
