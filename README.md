@@ -98,8 +98,10 @@ pruned_path = prune_path(path)
 ### Execute the flight
 
 #### Run
+```python
 python motion_planning.py --target_lat=37.792572 --target_lon=-122.397336 --target_alt=0.
+```
 
 #### Test flight 1
-Start location:   Lon: 37.792572, Lat: -122.397336, Alt: 0.0
+Start location:   Lon: 37.792572, Lat: -122.397336, Alt: 0.0 <br>
 Target location:  Lon: 37.793658, Lat: -122.398028, Alt: 0.0
